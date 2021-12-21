@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block body%}
+
+    <div class="two-players">
+        <img class="background_chart" src="{% static 'test/twoplayers.png' %}" alt="">
+        <img class = "spinnerimg" id="spinner" src="{% static 'images/heinekenspinner.png' %}" width="200" height="auto" onclick="spin()"/>
+        
+    </div>
+
+
+    <script>
+        var spins = 0;
+        var people = ["Sarah", "George"];
+        function spin () {
+        spins++;
+        var winner = Math.floor(Math.random() * people.length);
+        var rotation = (spins * 720) + (winner * (360 / people.length));
+        $('#spinner').css('transform', 'rotate('+rotation+'deg)');
+        setTimeout(function () {
+            $('output').html(people[winner]);
+        }, 3000);
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block body%}
+
+<div class="twoplayers">
+    <form method="post">
+        {% csrf_token %}
+
+        {% if pk == 1 %}
+            <div class="playername playernamefor1">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player11" id="name_of_players" placeholder="Name of Player 1">
+            </div>
+        {% elif pk == 2 %} 
+            <div class="playername playernamefor2">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player21" id="name_of_players" placeholder="Name of Player 1">
+                <input class="form-control name-of-players" type="text" name="name_of_player22" id="name_of_players" placeholder="Name of Player 2">
+            </div>
+        {% elif pk == 3 %}
+            <div class="playername playernamefor3">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player31" id="name_of_players" placeholder="Name of Player 1">
+                <input class="form-control name-of-players" type="text" name="name_of_player32" id="name_of_players" placeholder="Name of Player 2">
+                <input class="form-control name-of-players" type="text" name="name_of_player33" id="name_of_players" placeholder="Name of Player 3">
+            </div>
+        {% elif pk == 4 %}
+            <div class="playername playernamefor4">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player41" id="name_of_players" placeholder="Name of Player 1">
+                <input class="form-control name-of-players" type="text" name="name_of_player42" id="name_of_players" placeholder="Name of Player 2">
+                <input class="form-control name-of-players" type="text" name="name_of_player43" id="name_of_players" placeholder="Name of Player 3">
+                <input class="form-control name-of-players" type="text" name="name_of_player44" id="name_of_players" placeholder="Name of Player 4">
+            </div>
+        {% elif pk == 5 %}
+            <div class="playername playernamefor5">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player51" id="name_of_players" placeholder="Name of Player 1">
+                <input class="form-control name-of-players" type="text" name="name_of_player52" id="name_of_players" placeholder="Name of Player 2">
+                <input class="form-control name-of-players" type="text" name="name_of_player53" id="name_of_players" placeholder="Name of Player 3">
+                <input class="form-control name-of-players" type="text" name="name_of_player54" id="name_of_players" placeholder="Name of Player 4">
+                <input class="form-control name-of-players" type="text" name="name_of_player55" id="name_of_players" placeholder="Name of Player 5">
+            </div>
+        {% elif pk == 6 %}
+            <div class="playername playernamefor6">
+                <h1 class="player_name_header">PLAYER NAME</h1>
+                <input class="form-control name-of-players" type="text" name="name_of_player61" id="name_of_players" placeholder="Name of Player 1">
+                <input class="form-control name-of-players" type="text" name="name_of_player62" id="name_of_players" placeholder="Name of Player 2">
+                <input class="form-control name-of-players" type="text" name="name_of_player63" id="name_of_players" placeholder="Name of Player 3">
+                <input class="form-control name-of-players" type="text" name="name_of_player64" id="name_of_players" placeholder="Name of Player 4">
+                <input class="form-control name-of-players" type="text" name="name_of_player65" id="name_of_players" placeholder="Name of Player 5">
+                <input class="form-control name-of-players" type="text" name="name_of_player66" id="name_of_players" placeholder="Name of Player 6">
+            </div>
+        {% endif %}
+        
+        <input type="hidden" name="number_of_names" id="number_of_names" value="{{pk}}">
+        <input class="form-control btn btn-outline-secondary name-of-players-submit" type="submit" value="SPIN">
+
+    </form>
+</div>
+
+{% endblock %}
