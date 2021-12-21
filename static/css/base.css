@@ -88,7 +88,7 @@ body{
 
 .player_name_header{
     font-size: 5vh;
-    color: white;
+    color: black;
     text-align: center;
 }
 
@@ -96,15 +96,21 @@ body{
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1000px) {
+
+    .zoom
+    {
+        zoom: 50%;
+    }
+
     body {
         background-color: white !important;
     }
 
     .background_chart{
         height: 75vh;
-        width: 200%;
+        width: 150%;
         margin-top: 0%;
-        margin-left: -52%;
+        margin-left: -26%;
         border: none !important;
     }
 
@@ -120,9 +126,10 @@ body{
         height: 40vh;
         border-radius: 8px;
     }
+    
 
     .no-of-players{
-        width: 60%;
+        min-width: 60%;
         min-height: 10vh;
         font-size: 3vh;
         margin: 1% 20%;
@@ -134,12 +141,21 @@ body{
         min-height: 90vh;
         margin: 0% 0%;
         padding: 5%;
+
     }
 
     .name-of-players{
         width: 70%;
         height: 10vh;
         margin: 5% 15%;
+    }
+
+    .no-of-players-submit{
+        width: 40%;
+        min-height: 5vh;
+        font-size: 2vh;
+        margin: 0% 30%;
+        border-radius: 10px;
     }
 
     .name-of-players-submit{

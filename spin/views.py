@@ -15,7 +15,7 @@ def create_chart(num, label_name):
     if num == 2:
         import matplotlib.pyplot as plt
 
-        plt.pie(['50','50'], labels=  new_string.split(','))
+        plt.pie(['50','50'], labels=  new_string.split(','),autopct='%1.0f%%', pctdistance=1.1, labeldistance=1)
         plt.axis('equal')
         plt.savefig("static/test/twoplayers.png")
         plt.cla()

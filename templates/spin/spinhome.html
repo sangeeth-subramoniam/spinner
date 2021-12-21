@@ -10,7 +10,7 @@
     <form method="post">
         {% csrf_token %}
         <input class="form-control no-of-players" type="number" name="no_of_players" id="no_of_players" placeholder="No of Players" min="2" max="6">
-        <input class="form-control no-of-players-submit" type="submit" value="SPIN">
+        <input class="btn btn-outline-success no-of-players-submit" type="submit" value="SPIN">
     </form>
 </div>
 {% endblock %}
