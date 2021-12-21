@@ -1,0 +1,1 @@
+web: gunicorn spinner.wsgi --log-file -
