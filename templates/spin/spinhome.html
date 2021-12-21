@@ -10,25 +10,7 @@
     <form method="post">
         {% csrf_token %}
         <input class="form-control no-of-players" type="number" name="no_of_players" id="no_of_players" placeholder="No of Players" min="2" max="6">
-        <input class="form-control no-of-players-submit" type="submit" value="spin">
+        <input class="form-control no-of-players-submit" type="submit" value="SPIN">
     </form>
 </div>
-
-
-<script>
-    var spins = 0;
-    var people = ["Sarah", "George"];
-
-    function spin () {
-    spins++;
-    var winner = Math.floor(Math.random() * people.length);
-    var rotation = (spins * 720) + (winner * (360 / people.length));
-
-    $('img').css('transform', 'rotate('+rotation+'deg)');
-    setTimeout(function () {
-        $('output').html(people[winner]);
-    }, 3000);
-    
-}
-</script>
 {% endblock %}

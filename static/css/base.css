@@ -64,7 +64,7 @@ body{
 
 .playername{
     max-height: 100vh;
-    min-height: 50vh;
+    min-height: 10vh !important;
     margin: 0% 0%;
     padding: 2%;
 }
@@ -79,7 +79,7 @@ body{
 .name-of-players-submit{
     width: 30%;
     min-height: 5vh;
-    font-size: 2vh;
+    font-size: 2vh !important;
     margin: -2% 35%;
     border-radius: 10px;
     cursor: pointer;
@@ -97,20 +97,34 @@ body{
 
 @media screen and (max-width: 1000px) {
     body {
-        background-color: rgb(138, 138, 138);
+        background-color: white !important;
+    }
+
+    .background_chart{
+        height: 75vh;
+        width: 200%;
+        margin-top: 0%;
+        margin-left: -52%;
+        border: none !important;
+    }
+
+    .spinnerimg{
+        height: 25vh!important;
+        margin-top: -50vh !important;
     }
 
     .spinner-logo{
-        width: 80%;
-        margin: 10% 10%;
-        height: 60vh;
+        width: 50%;
+        margin: 10% 25%;
+        margin-bottom: 5%;
+        height: 40vh;
         border-radius: 8px;
     }
 
     .no-of-players{
         width: 60%;
         min-height: 10vh;
-        font-size: 6vh;
+        font-size: 3vh;
         margin: 1% 20%;
         border-radius: 15px;
     }
@@ -126,6 +140,17 @@ body{
         width: 70%;
         height: 10vh;
         margin: 5% 15%;
+    }
+
+    .name-of-players-submit{
+        width: 40%;
+        min-height: 5vh;
+        font-size: 2vh !important;
+        margin: 0% 35%;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: white;
+        padding: 1%;
     }
 
 
